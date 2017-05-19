@@ -28,12 +28,13 @@ public class Runner {
 		myRunner.welcome();
 
 		intBase10 = myRunner.enterInteger();
+		
 
 		hexAnswer = myConverter.changeToHex(intBase10);
 
 		// for testing, remove all syso when done
-		System.out.println("0-255 entry: " + intBase10 + ", hex conversion: " + hexAnswer);
-
+	//	System.out.println("0-255 entry: " + intBase10 + ", hex conversion: " + hexAnswer);
+JOptionPane.showMessageDialog(null, "0-255 Entry " + intBase10+ ", hex conversion: " + hexAnswer);
 		// now JOP the answer
 		// then JOP "Do you want to enter another 0-255 Yes or No"
 		// place this in a loop, keep looping as long as they answer Yes
@@ -41,9 +42,14 @@ public class Runner {
 	}
 
 	private int enterInteger() {
+		int number1;
+		String deci = JOptionPane.showInputDialog ("Enter a number ");
+
+		number1 = Integer.parseInt (deci); 
+		
 		// code for you to complete
 		// for basic test return 0 (hex 00), or 255 (hex FF)
-		return 255;
+		return number1;
 	}
 
 	private void welcome() {
